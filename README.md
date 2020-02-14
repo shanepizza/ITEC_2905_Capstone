@@ -26,13 +26,7 @@ if (contentType.contains("multipart")) {
 		//Add to printout list
 			attachFiles += fileName + ", ";
 			File f = new File(saveToDirectory);
-							
-		//This grabs the HTML code and gives me a string for commands.
-		//Sadly this is no longer in use as I need to implement RegEx to use the message 
-		//content to its full potential. 
-			Document doc = Jsoup.parse(messageContent);
-			String text = doc.body().text();
-													
+												
 		//Get client name.
 			getClient(message);
 		//Add client name to search directory so we only search for the file under the correct name.
