@@ -14,11 +14,9 @@ The program has a Login screen that curently must be set manually for the email 
 
 ## To Use
 You will need the Java Libraries: 
-<list>
-jakarta.activation.jar
-jakarta.mail.jar
-jsoup-1.12.1.jar
-</list>
-To use, download the zip file called 'Capstone Project' and open it in a compiler. 
-The current file path looks for a folder called 'GUARDIANSHIP' in the documents folder. This can be changed by changing the 'saveToDirectory' variable in the main method to the correct file path. 
+* jakarta.activation.jar
+* jakarta.mail.jar
+* jsoup-1.12.1.jar
+To use, download the zip file called 'Capstone Project' and open it in a compiler.  
+The current file path looks for a folder called 'GUARDIANSHIP' in the documents folder.   This can be changed by changing the 'saveToDirectory' variable in the main method to the correct file path. 
 
