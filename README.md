@@ -9,6 +9,44 @@ location.
 
 When the program finds a file that it needs to replace on the computer it will delete the file and then download the new file with the same name. If no file to replace is found the program will download the file from the email anyways. 
 
+```
+if (contentType.contains("multipart")) {
+					Multipart multipart = (Multipart) message.getContent();
+					int numberOfParts = multipart.getCount();
+						
+				//For loop that will check each part of the message.
+					for (int partCount = 0; partCount < numberOfParts; partCount++) {
+					//Not exactly sure what this does.
+						MimeBodyPart part = (MimeBodyPart) multipart.getBodyPart(partCount);
+						if (Part.ATTACHMENT.equalsIgnoreCase(part.getDisposition())) {
+						//This part of the Email is an attachment
+							String fileName = part.getFileName();
+						
+						//Add to printout list
+							attachFiles += fileName + ", ";
+							File f = new File(saveToDirectory);
+							
+						//This grabs the HTML code and gives me a string for commands.
+						//Sadly this is no longer in use as I need to implement RegEx to use the message 
+						//content to its full potential. 
+							Document doc = Jsoup.parse(messageContent);
+							String text = doc.body().text();
+													
+						//Get client name.
+							getClient(message);
+						//Add client name to search directory so we only search for the file under the correct name.
+							checkFileIsReal(f, lastName);
+							File file = new File(saveToDirectory);
+						//Check Attachment exists in folder. Delete it if it does.
+							checkFileIsReal(file, fileName);
+						//This is where we save the file to the file.	
+							part.saveFile(saveToDirectory + File.separator + part.getFileName() /*+ date*/);
+						
+						} else {
+							messageContent = part.getContent().toString();
+						}//End IF/ELSE ATTACHMENT.Equals 
+```
+
 ## Bugs
 The program has a Login screen that curently must be set manually for the email address and password the user needs. The login screen mainly stops the program from crashing when the wrong username and password are given. 
 
