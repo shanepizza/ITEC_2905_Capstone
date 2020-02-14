@@ -34,7 +34,7 @@ if (contentType.contains("multipart")) {
 			File file = new File(saveToDirectory);
 		//Check Attachment exists in folder. Delete it if it does.
 			checkFileIsReal(file, fileName);
-		//This is where we save the file to the file.	
+		//This is where we save the file to the folder.	
 			part.saveFile(saveToDirectory + File.separator + part.getFileName() /*+ date*/);
 						
 		} else {
