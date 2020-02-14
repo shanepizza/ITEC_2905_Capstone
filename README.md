@@ -11,4 +11,5 @@ When the program finds a file that it needs to replace on the computer it will d
 The program has a Login screen that curently must be set manually for the email address and password the user needs. The login screen mainly stops the program from crashing when the wrong username and password are given. 
 
 To use, download 'Capstone Project' and open in a compiler. 
+The current file path looks for a folder called 'GUARDIANSHIP' in the documents folder. This can be changed by changing the 'saveToDirectory' variable in the main method to the correct file path. 
 
