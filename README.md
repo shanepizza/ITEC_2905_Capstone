@@ -1,5 +1,5 @@
 # ITEC_2905_Capstone
-
+###Synopsis
 This is my Capstone project. 
 The goal of this program is to reduce the time wasted by guardianship attorneys when they have to update files on their PC. This program will find and download those files for them. 
 
