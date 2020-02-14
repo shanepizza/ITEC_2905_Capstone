@@ -1,5 +1,5 @@
 # ITEC_2905_Capstone
-### Synopsis
+## Synopsis
 This is my Capstone project. 
 The goal of this program is to reduce the time wasted by guardianship attorneys when they have to update files on their PC. This program will find and download those files for them. 
 
@@ -9,7 +9,7 @@ location.
 
 When the program finds a file that it needs to replace on the computer it will delete the file and then download the new file with the same name. If no file to replace is found the program will download the file from the email anyways. 
 
-### Bugs
+## Bugs
 The program has a Login screen that curently must be set manually for the email address and password the user needs. The login screen mainly stops the program from crashing when the wrong username and password are given. 
 
 ## To Use
